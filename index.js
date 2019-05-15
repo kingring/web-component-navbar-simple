@@ -4,7 +4,6 @@
 
 	app.component("navSimple", {
 		templateUrl: "navbar-simple.html",
-		controllerAs: "cntl",
 		bindings: {
 		},
 		controller: "NavSimpleController"
