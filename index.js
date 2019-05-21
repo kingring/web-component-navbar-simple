@@ -5,6 +5,10 @@
 	app.component("navSimple", {
 		templateUrl: "navbar-simple.html",
 		bindings: {
+			leftNavItems: "<",
+			rightNavItems: "<",
+			leftNavSelect: '&',
+			rightNavSelect: '&'
 		},
 		controller: "NavSimpleController"
 	});
@@ -17,8 +21,17 @@
 
 		var vm = $scope.$ctrl;
 
-		vm.$onInit = function() {
-			
+		vm.onSelectLeftNav = function(item) {
+			vm.leftNavSelect({
+				'item': item
+			});
+		};
+
+		vm.onSelectRightNav = function(item, ditem) {
+			vm.rightNavSelect({
+				'item': item,
+				'ditem': ditem
+			});
 		};
 	}
 
