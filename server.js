@@ -74,8 +74,16 @@ app.get('/fonts/ionicons.woff2', function(req,res){
   res.sendFile(path.join(__dirname + '/node_modules/ionicons/dist/fonts/ionicons.woff2'))
 });
 
-app.get('/navbar-simple.html', function(req, res){
-  res.sendFile(path.join(__dirname + '/navbar-simple.html'));
+// app.get('/navbar-simple.html', function(req, res){
+//   res.sendFile(path.join(__dirname + '/navbar-simple.html'));
+// });
+
+app.get('/wcnbsimple.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/dist/wcnbsimple.js'));
+});
+
+app.get('/wcnbsimpletemplates.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/dist/wcnbsimpletemplates.js'));
 });
 
 app.listen(process.env.PORT || 3000);
